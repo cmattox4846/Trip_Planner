@@ -1,3 +1,5 @@
+//decleration of Varriable and arrrays
+
 let destination = ['Miami', 'Las Vegas', 'Austin', 'New York',];
 let resturant = ['Millers Ale House', 'Ruth Chris', 'McDonalds','Subway'];
 let transport = ['Train','Car','Plane','Bus'];
@@ -8,10 +10,7 @@ let resResult;
 let transResult;
 let enterResult;
 
-
-
-
-
+//fuctions to random generate a selection
 
 function destinationGen(local){
     let selected = local[Math.floor(Math.random()*local.length)];
@@ -33,12 +32,12 @@ function entertainmentGen(enterntainment){
     return selected
 };
 
+
+//function that combines selections and displays comfirmation box
+
 function randomSelection(){
     getRandomTrip()
-    console.log(desResult,resResult,transResult,enterResult)
     let result = window.confirm('Here is your random vacation options!'+ '\n' + 'Your destination will be: ' + desResult +'\n' + 'Your dining choice will be: ' + resResult +'\n'+ 'You will travel by: ' + transResult +'\n'+ 'While you are there you will enjoy a: ' + enterResult +'\n'+'Please choose OK your confirm or Cancel to choose again!');
-    
-  
     
     if (result === true){
         console.log(result)
@@ -59,10 +58,9 @@ function getRandomTrip(){
     enterResult = entertainmentGen(entertainment);
 }
 
-
-
-
 let confirmOrNot = randomSelection()
+
+//function that will loop until user has confirmed they are happy with results
 
 function confirmOrDenieTravel(confirmOrNot){
  let confirmResults1 = false;
@@ -70,6 +68,7 @@ while(confirmResults1 === false){
         if (confirmOrNot === true){
         
             alert('Your travel plans have been confirms!'+'\n'+ 'Your destination will be: ' + desResult +'\n' + 'Your dining choice will be: ' + resResult +'\n'+ 'You will travel by: ' + transResult +'\n'+ 'While you are there you will enjoy a: ' + enterResult )
+            console.log('Your travel plans have been confirms!'+'\n'+ 'Your destination will be: ' + desResult +'\n' + 'Your dining choice will be: ' + resResult +'\n'+ 'You will travel by: ' + transResult +'\n'+ 'While you are there you will enjoy a: ' + enterResult )
             confirmResults1 = true
             return true
             
@@ -77,17 +76,14 @@ while(confirmResults1 === false){
         else{
         
             alert('Let try again!')
-            confirmOrNot = randomSelection()
-            
-    
-            
-                      
+            confirmOrNot = randomSelection()           
         }
 }  
 }
 
-
  let confirmResults = confirmOrDenieTravel(confirmOrNot)
+
+//pops up completion box
 
 function loopConfirm(confirmResults){
 
