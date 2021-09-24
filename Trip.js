@@ -65,19 +65,22 @@ function getRandomTrip(){
 let confirmOrNot = randomSelection()
 
 function confirmOrDenieTravel(confirmOrNot){
- let confirmResults = false;
-while(confirmResults === false){
+ let confirmResults1 = false;
+while(confirmResults1 === false){
         if (confirmOrNot === true){
         
             alert('Your travel plans have been confirms!'+'\n'+ 'Your destination will be: ' + desResult +'\n' + 'Your dining choice will be: ' + resResult +'\n'+ 'You will travel by: ' + transResult +'\n'+ 'While you are there you will enjoy a: ' + enterResult )
-            confirmResults = true
-           
+            confirmResults1 = true
+            return true
+            
         }
         else{
         
             alert('Let try again!')
-            randomSelection()
-            return true
+            confirmOrNot = randomSelection()
+            
+    
+            
                       
         }
 }  
@@ -86,13 +89,13 @@ while(confirmResults === false){
 
  let confirmResults = confirmOrDenieTravel(confirmOrNot)
 
-// function loopConfirm(confirmResults){
+function loopConfirm(confirmResults){
 
-//     if(confirmResults === true){
-//         alert('Enjoy your travels!');
-//     }
+    if(confirmResults === true){
+        alert('Enjoy your travels!');
+    }
        
-//  };
+ };
 
-// loopConfirm(confirmResults)
+loopConfirm(confirmResults)
 
