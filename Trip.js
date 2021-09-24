@@ -13,6 +13,8 @@ let desChoiceResults;
 let foodChoiceResults;
 
 
+// returning results of random gens and displaying them
+
 function getRandomTrip(){
     desResult = destinationGen(destination);
     resResult = resturantGen(resturant);
@@ -35,6 +37,7 @@ function randomSelection(){
 
 }
 
+// confirming each selection
 
 function chooseYes(selectionString){
     let choiceResultTrue = true
@@ -62,7 +65,7 @@ let confirmOrNot = randomSelection()
 
 
 
-//fuctions to random generate a selection
+//fuctions to random generate a selection and confirm choice
 
 function destinationGen(local){
     let successful = false
@@ -110,13 +113,45 @@ function resturantGen(food){
 };
 
 function transportationGen(wayAround){
-    let selected = wayAround[Math.floor(Math.random()*wayAround.length)];
-    return selected
+    let successful = false
+    let selected
+    selected = wayAround[Math.floor(Math.random()*wayAround.length)];
+    transChoiceResults = chooseYes(selected)
+    while (successful === false ){
+       
+    
+    
+    if (transChoiceResults === true){
+        successful = true
+        return selected
+    }
+    else{
+        selected = wayAround[Math.floor(Math.random()*wayAround.length)];
+        transChoiceResults = chooseYes(selected)
+    }
+        
+    }
 };
 
-function entertainmentGen(enterntainment){
-    let selected = entertainment[Math.floor(Math.random()*entertainment.length)];
-    return selected
+function entertainmentGen(entertainment){
+    let successful = false
+    let selected
+    selected = entertainment[Math.floor(Math.random()*entertainment.length)];
+    enterChoiceResults = chooseYes(selected)
+    while (successful === false ){
+       
+    
+    
+    if (enterChoiceResults === true){
+        successful = true
+        return selected
+    }
+    else{
+        selected = entertainment[Math.floor(Math.random()*entertainment.length)];
+        enterChoiceResults = chooseYes(selected)
+    }
+        
+    }
 };
 
 
