@@ -161,31 +161,6 @@ function entertainmentGen(entertainment){
     }
 };
 
-
-
-
-
-
-
-//function that combines selections and displays comfirmation box
-
-// function randomSelection(){
-//     getRandomTrip()
-//     let result = window.confirm('Here is your random vacation options!'+ '\n' + 'Your destination will be: ' + desResult +'\n' + 'Your dining choice will be: ' + resResult +'\n'+ 'You will travel by: ' + transResult +'\n'+ 'While you are there you will enjoy a: ' + enterResult +'\n'+'Please choose OK your confirm or Cancel to choose again!');
-    
-//     if (result === true){
-//         console.log(result)
-//         return true 
-//     }
-//     else {
-//         console.log(result)
-//         return false
-        
-//     }
-
-// }
-
-
 //function that will loop until user has confirmed they are happy with results
 
 function confirmOrDenieTravel(confirmOrNot){
