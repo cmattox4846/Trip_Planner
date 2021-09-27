@@ -13,6 +13,13 @@ let desChoiceResults;
 let foodChoiceResults;
 
 
+intialQuestion()
+
+function intialQuestion(){
+    let answer = alert('ARE YOUR READY TO BOOK THE TRIP OF A LIFETIME!')
+    
+}
+
 // returning results of random gens and displaying them
 
 function getRandomTrip(){
@@ -23,7 +30,7 @@ function getRandomTrip(){
 }
 function randomSelection(){
     getRandomTrip()
-    let result = window.confirm('Here is your random vacation options!'+ '\n' + 'Your destination will be: ' + desResult +'\n' + 'Your dining choice will be: ' + resResult +'\n'+ 'You will travel by: ' + transResult +'\n'+ 'While you are there you will enjoy a: ' + enterResult +'\n'+'Please choose OK your confirm or Cancel to choose again!');
+    let result = window.confirm('Here is your random vacation options!'+ '\n' + 'Your destination will be: ' + desResult +'\n' + 'Your dining choice will be: ' + resResult +'\n'+ 'You will travel by: ' + transResult +'\n'+ 'While you are there you will enjoy: ' + enterResult +'\n'+'Please choose OK your confirm or Cancel to choose again!');
     
     if (result === true){
         console.log(result)
@@ -162,21 +169,21 @@ function entertainmentGen(entertainment){
 
 //function that combines selections and displays comfirmation box
 
-function randomSelection(){
-    getRandomTrip()
-    let result = window.confirm('Here is your random vacation options!'+ '\n' + 'Your destination will be: ' + desResult +'\n' + 'Your dining choice will be: ' + resResult +'\n'+ 'You will travel by: ' + transResult +'\n'+ 'While you are there you will enjoy a: ' + enterResult +'\n'+'Please choose OK your confirm or Cancel to choose again!');
+// function randomSelection(){
+//     getRandomTrip()
+//     let result = window.confirm('Here is your random vacation options!'+ '\n' + 'Your destination will be: ' + desResult +'\n' + 'Your dining choice will be: ' + resResult +'\n'+ 'You will travel by: ' + transResult +'\n'+ 'While you are there you will enjoy a: ' + enterResult +'\n'+'Please choose OK your confirm or Cancel to choose again!');
     
-    if (result === true){
-        console.log(result)
-        return true 
-    }
-    else {
-        console.log(result)
-        return false
+//     if (result === true){
+//         console.log(result)
+//         return true 
+//     }
+//     else {
+//         console.log(result)
+//         return false
         
-    }
+//     }
 
-}
+// }
 
 
 //function that will loop until user has confirmed they are happy with results
@@ -186,7 +193,7 @@ function confirmOrDenieTravel(confirmOrNot){
 while(confirmResults1 === false){
         if (confirmOrNot === true){
         
-            alert('Your travel plans have been confirms!'+'\n'+ 'Your destination will be: ' + desResult +'\n' + 'Your dining choice will be: ' + resResult +'\n'+ 'You will travel by: ' + transResult +'\n'+ 'While you are there you will enjoy a: ' + enterResult )
+            alert('Your travel plans have been confirms!'+'\n'+ 'Your will be traveling to ' + desResult + ' by ' + transResult +'.'+ '\n'+ 'You will be dining at ' + resResult + '.' +'\n'+ 'While you are there you will enjoy ' + enterResult +'!' )
             console.log('Your travel plans have been confirms!'+'\n'+ 'Your destination will be: ' + desResult +'\n' + 'Your dining choice will be: ' + resResult +'\n'+ 'You will travel by: ' + transResult +'\n'+ 'While you are there you will enjoy a: ' + enterResult )
             confirmResults1 = true
             return true
